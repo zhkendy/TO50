@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MAPPING id="big-endian">
+
+	<SECTION id="Controller SQC ">
+	
+			<DATA id="StopOnUL" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count Stop on user Up limit</EXPLANATION>
+            </DATA>
+			
+			<DATA id="StopOnDL" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count Stop on user Down limit</EXPLANATION>
+            </DATA>
+			
+			<DATA id="StopOnMy" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count Stop on My</EXPLANATION>
+            </DATA>
+			
+			<DATA id="StopBetweenLimits" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count Stop on unknow position, between limits.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="StopAboveLimits" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count Stop on unknow position, above limits</EXPLANATION>
+            </DATA>
+			
+			<DATA id="StopBelowLimits" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count Stop on unknow position, below limits</EXPLANATION>
+            </DATA>
+
+			<DATA id="PwrCut" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off power cut</EXPLANATION>
+            </DATA>
+			
+			<DATA id="PwrCutWhileMoving" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off power cut while moving</EXPLANATION>
+            </DATA>
+			
+			<DATA id="IWatchdogReset" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off reset caused by independant watchdog. Should be 0.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="WWatchdogReset" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off reset caused by window watchdog. Should be 0.</EXPLANATION>
+            </DATA>
+
+			<DATA id="ILLOPF_Reset" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off reset caused by Illegal operation code.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="EMCF_Reset" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off reset caused by EMC.</EXPLANATION>
+            </DATA>
+
+			<DATA id="SWIMF_Reset" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off reset caused by SWIM.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="AllReset" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number off reset</EXPLANATION>
+            </DATA>
+	
+			<DATA id="FreeSpaceInStack" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Percentage off free stack space. Should be > 50% </EXPLANATION>
+            </DATA>
+			
+			<DATA id="FreeSpaceInHeap" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Percentage off free heap space.Should be close to 100%</EXPLANATION>
+            </DATA>
+			
+    </SECTION>
+	
+	<SECTION id="LowPower SQC ">
+	
+			<DATA id="LowPowerCtr" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the board enter in low power mode.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="WakeUpByLongTimer" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count wake up caused by auto save timer.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="WakeUpByNoise" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count wake up caused by RSSI, but with any RTS valid RTS frame.</EXPLANATION>
+            </DATA>
+
+			<DATA id="WakeUpByunpairedRTS" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count wake up caused by Unpaired RTS remote.</EXPLANATION>
+            </DATA>
+
+			<DATA id="WakeUpByPairedRTS" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count wake up caused by Paired RTS remote.</EXPLANATION>
+            </DATA>	
+			
+			<DATA id="WakeByPartialRTSframe" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count wake up caused by RSSI, without complete frame detected, but RTS timing detected.</EXPLANATION>
+            </DATA>	
+			
+    </SECTION>
+	
+	<SECTION id="Ergo SQC ">
+
+			<DATA id="GlobalMode" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION> 
+			<br />
+			0 : No personalisation (Spring or RTS) => product doesn't pass on factory test bench.
+			<br />
+			1 : Spring Personalisation. Product valid on factory test bench. Product only answer to Spring remote
+			<br />
+			2 : WorldWide Personalisation. Product valid on factory test bench. Product answer to RTS remote.
+			</EXPLANATION>
+            </DATA>
+			
+			<DATA id="UnPairedRTSFrame" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of unpaired RTS frame received.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_Up" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS up order received.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_Down" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS Down order received.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_Stop" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS Stop order received.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_My" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS go to my order received.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_ModeUp" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS mode up order received. </EXPLANATION>
+            </DATA>
+
+			<DATA id="RTS_ModeDown" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS mode down order received.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_ModeStop" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS mode stop order received. </EXPLANATION>
+            </DATA>
+			
+			<DATA id="RTS_Goto" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count total number of RTS go to order received. </EXPLANATION>
+            </DATA>
+			
+			<DATA id="UEL_Reseting" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the up end limit has been resetting.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DEL_Reseting" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the down end limit has been resetting.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="My_Reseting" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the My position has been resetting.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Motor_Reseting" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the user has reset the motor</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Motor_RotationResetting" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the user has change the motor rotation direction</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Wheel_RotationResetting" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the user has change the motor wheel rotation direction</EXPLANATION>
+            </DATA>
+			
+			<DATA id="RemotePurge" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time the user has delete all remote</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Last_Used_Remote_Address" type="None" reading="reverse" size="3">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Last Used Remote Address</EXPLANATION>
+			</DATA>
+
+			<DATA id="Last_Used_Remote_Type" type="Integer" reading="reverse" size="1">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Last Used Remote type : 
+			<br /> 
+			0 : UNKNOWN 
+			<br /> 
+			1 : 3 BUTTON 
+			<br /> 
+			2 : 1 BUTTON 
+			<br /> 
+			3 : SPRING 2 BUTTON 
+			<br /> 
+			4 : SENSOR 
+			<br /> 
+			5 : FACTORY CRYPTED
+			<br /> 
+			6 : FACTORY UNCRYPTED
+			<br /> 
+			7 : RTDS 
+			</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Last_Used_Remote_Rolling_Code" type="None" reading="direct" size="2">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Last Used Remote Rolling code</EXPLANATION>
+			</DATA>
+		
+			<DATA id="Remote_0_Address" type="None" reading="reverse" size="3">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 0 Address</EXPLANATION>
+			</DATA>
+
+			<DATA id="Remote_0_type" type="Integer" reading="reverse" size="1">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 0 type</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Remote_0_Rolling_code" type="None" reading="direct" size="2">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 0 Rolling code</EXPLANATION>
+			</DATA>
+
+			<DATA id="Remote_1_Address" type="None" reading="reverse" size="3">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 1 Address</EXPLANATION>
+			</DATA>
+
+			<DATA id="Remote_1_type" type="Integer" reading="reverse" size="1">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 1 type</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Remote_1_Rolling_code" type="None" reading="direct" size="2">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 1 Rolling code</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Remote_2_Address" type="None" reading="reverse" size="3">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 2 Address</EXPLANATION>
+			</DATA>
+
+			<DATA id="Remote_2_type" type="Integer" reading="reverse" size="1">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 2 type</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Remote_2_Rolling_code" type="None" reading="direct" size="2">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 2 Rolling code</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Remote_3_Address" type="None" reading="reverse" size="3">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 3 Address</EXPLANATION>
+			</DATA>
+
+			<DATA id="Remote_3_type" type="Integer" reading="reverse" size="1">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 3 type</EXPLANATION>
+			</DATA>
+			
+			<DATA id="Remote_3_Rolling_code" type="None" reading="direct" size="2">
+			<UNIT>no</UNIT>
+			<EXPLANATION>Remote 3 Rolling code</EXPLANATION>
+			</DATA>
+		
+    </SECTION>
+	
+	<SECTION id="Encoder SQC ">
+	
+			<DATA id="MotorTurnDown" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count DC motor revolution in Down direction.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="MotorTurnUp" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count DC motor revolution in Up direction.</EXPLANATION>
+            </DATA>
+
+			<DATA id="StateMissMatch" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time encoder State before Shutdown != State Power On.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="StateMatch" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count how many time encoder State before Shutdown == State Power On.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirASum" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Sum of Dir A transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirA_00_to_01" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir A transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirA_01_to_11" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir A transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirA_11_to_10" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir A transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirA_10_to_00" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir A transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirBSum" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Sum of Dir B transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirB_00_to_10" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir B transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirB_10_to_11" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir B transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirB_11_to_01" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir B transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DirB_01_to_00" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Dir B transition, can be compensate.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Err_00_to_11" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Forbedden transition, can't be compensate. High vaule here result in end limits drift.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Err_11_to_00" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Forbedden transition, can't be compensate. High vaule here result in end limits drift.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Err_10_to_01" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Forbedden transition, can't be compensate. High vaule here result in end limits drift.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Err_01_to_10" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Forbedden transition, can't be compensate. High vaule here result in end limits drift.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="DriftCompensationSum" type="Integer" signed="true" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Compensation value in tick added to position to correct end limits drift.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Position" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Current position in motor turn.</EXPLANATION>
+            </DATA>
+
+			<DATA id="IsInverted" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Motor direction is inverted (1) or not (0). Default value is 1.</EXPLANATION>
+            </DATA>	
+
+			<DATA id="LastMoveDirection" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Last move direction. (1 Unroll,255 Roll)</EXPLANATION>
+            </DATA>	
+
+			<DATA id="CurrentMovingDirection" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Current move direction. Should be (0, Stop).</EXPLANATION>
+            </DATA>	
+			
+    </SECTION>
+	
+	<SECTION id="Motor Driver SQC ">
+	
+			<DATA id="Motor Polarity Inverted" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION> 1 if the DC motor polarity is inverted. Should be 0.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Motor Direction Inverted" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>1 if global direction is inverted. 1 by default.</EXPLANATION>
+            </DATA>
+
+			<DATA id="Last Motor Move Direction" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Last move direction. (1 Unroll,255 Roll) </EXPLANATION>
+            </DATA>
+			
+			<DATA id="MotorError" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Count Number off motor Error (Motor Blocked, LowSpeed ext... Error could be caused by encoder hardware malfunction. </EXPLANATION>
+            </DATA>
+			
+    </SECTION>
+	
+	<SECTION id="Position SQC ">
+	
+			<DATA id="UEL" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> User Up absolute end limits, in DC motor turn. </EXPLANATION>
+            </DATA>
+			
+			<DATA id="DEL" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> User down absolute end limits, in DC motor turn. </EXPLANATION>
+            </DATA>
+
+			<DATA id="MY" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> User my absolute position, in DC motor turn. </EXPLANATION>
+            </DATA>
+
+			<DATA id="My Set" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION> 1 if my position is set.</EXPLANATION>
+            </DATA>	
+			
+    </SECTION>
+	
+	<SECTION id="Power Monitor SQC ">
+	
+			<DATA id="Max" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Maximum recorded power line voltage. Raw ADC value. Multiply by 0.0184 to get voltage value.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Min" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Minimym recorded power line voltage. Raw ADC value.Multiply by 0.0184 to get voltage value.</EXPLANATION>
+            </DATA>
+
+			<DATA id="Avr" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Current power line voltage. Raw ADC value.Multiply by 0.0184 to get voltage value.</EXPLANATION>
+            </DATA>
+			
+    </SECTION>
+	
+	<SECTION id="Chrono SQC ">
+	
+			<DATA id="Chrono_TotalTime Runing" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION> This chronometer count time since first boot. 1 if chronometer is currently running. </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_TotalTime DayTime ms" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Time in ms. [ 0; 86400000 ] </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_TotalTime Day" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Day counter value </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_LowPowerTime Runing" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>This chronometer count time spend in low power mode. 1 if chronometer is currently running.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_LowPowerTime DayTime ms" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Time in ms. [ 0; 86400000 ] </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_LowPowerTime Day" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Day counter value </EXPLANATION>
+            </DATA>
+
+			<DATA id="Chrono_HighPowerTime Runing" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>This chronometer count time spend in high power mode. 1 if chronometer is currently running.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_HighPowerTime DayTime ms" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Time in ms. [ 0; 86400000 ] </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_HighPowerTime Day" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Day counter value </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_MoveTime Runing" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>This chronometer count moving time. 1 if chronometer is currently running.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_MoveTime DayTime ms" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Time in ms. [ 0; 86400000 ] </EXPLANATION>
+            </DATA>
+			
+			<DATA id="Chrono_MoveTime Day" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Day counter value </EXPLANATION>
+            </DATA>
+    </SECTION>
+	
+	<SECTION id="Archiver SQC ">
+	
+			<DATA id="SpaceUsedInByte" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION> Eeprom total space used in byte.</EXPLANATION>
+            </DATA>
+			
+			<DATA id="UsableSpace" type="Integer" signed="false" size="2">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Eeprom total usable space.</EXPLANATION>
+            </DATA>
+
+			<DATA id="CriticalAreaWrite" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count the number of write in eeprom critical area.</EXPLANATION>
+            </DATA>
+
+			<DATA id="NormalAreaWrite" type="Integer" signed="false" size="4">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count the number of write in eeprom normal area.</EXPLANATION>
+            </DATA>	
+
+			<DATA id="CriticalAreaWriteFail" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count the number of write failure in critical area. Hardware failure if different than 0.</EXPLANATION>
+            </DATA>	
+
+			<DATA id="NormalAreaWriteFail" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count the number of write failure in critical area. Hardware failure if different than 0.</EXPLANATION>
+            </DATA>	
+			
+			<DATA id="CriticalAreaReadError" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count the number critical data load failure. should be 0. value different than 0 can be considered has an hardware failure, critical data are write three time in eeprom.</EXPLANATION>
+            </DATA>	
+			
+			<DATA id="CriticalAreaReadFail" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Count the number critical data load failure. should be 0.</EXPLANATION>
+            </DATA>	
+			
+    </SECTION>
+	
+	<SECTION id="Event SQC ">
+	
+			<DATA id="Event 0" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Last event</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 1" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>		
+
+			<DATA id="Event 2" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 3" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 4" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 5" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 6" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 7" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 8" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 9" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>				
+			
+			<DATA id="Event 10" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 11" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>		
+
+			<DATA id="Event 12" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 13" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 14" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 15" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 16" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 17" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 18" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 19" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+			
+			<DATA id="Event 20" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 21" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>		
+
+			<DATA id="Event 22" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 23" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 24" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 25" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 26" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 27" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 28" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 29" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>				
+			
+			<DATA id="Event 30" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 31" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>		
+
+			<DATA id="Event 32" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 33" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 34" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 35" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 36" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 37" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>	
+
+			<DATA id="Event 38" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>...</EXPLANATION>
+            </DATA>
+		
+			<DATA id="Event 39" type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION>Oldest event</EXPLANATION>
+            </DATA>	
+			
+			<DATA id="None " type="Integer" signed="false" size="1">
+			<UNIT>number</UNIT>
+			<EXPLANATION> 
+			<br />
+			  0 None                               
+			  <br />
+			  1 Reset                             
+				<br />
+			  2 Add Teleco                         
+				<br />
+			  3 Cant Add Teleco                     
+				<br />
+			  4 Remove Teleco                     
+				<br />
+			  5 Remove All Teleco                   
+				<br />
+			  6 Ergo Enter In User Mode              
+				<br />
+			  7 Ergo Enter In Set And Not Paired        
+				<br />
+			  8 Ergo Enter In Set And Paired           
+				<br />
+			  9 Ergo Enter In Limit Resetting         
+				<br />
+			  10 Ergo Enter In Reseting Rotation Dir    
+				<br />
+			  11 Actuator In EMS Mode               
+				<br />
+			  12 SendS QC   
+				<br />
+			  13 Save All  			  
+				<br /> 
+			  14 Power Cut                            
+				<br />
+			  15 3 min move Timeout     
+				<br />
+			  16 Feedback Request    			  
+				<br />
+			  17 Double Feedback Request                 
+				<br />
+			  18 Motor Blocked                      
+				<br />
+			  19 Reset DEL                          
+				<br />
+			  20 Reset UEL                          
+				<br />
+			  21 Reset Rotation Dir                   
+			  <br />
+			  22 Error Feedback              
+				<br />
+			  23 Not Used Event            
+				<br />
+			  24 Ergo TimeOut                       
+				<br />
+			  25 Stop On UL                          
+				<br />
+			  26 Stop On DL                          
+				<br />
+			  27 Stop On My                          
+				<br />
+			  28 Stop Between Limits                 
+				<br />
+			  29 Stop Above Limits                   
+				<br />
+			  30 Stop Below Limits                   
+				<br />
+			  31 Stop Request                          
+				<br />
+			  32 Open EMS Window                     
+				<br />
+			  33 Close EMS Window                    
+				<br />
+			  34 Personalisation None                  
+				<br />
+			  35 Personalisation Spring                
+				<br />
+			  36 Personalisation WorldWide             
+				<br />
+			  37 Actuator In AutoTest              
+				<br />
+			  38 Roll Request                           
+				<br />
+			  39 UnRoll Request                         
+				<br />
+			  40 Ergo Enter In Sensitivity Test        
+				<br />
+			  41 Move Action Request Rejected         
+				<br />
+			  42 Not Used Event     
+				<br />
+			  43 Ergo Wheel Dirchange                
+				<br />
+			</EXPLANATION>
+            </DATA>
+    </SECTION>
+	
+	
+</MAPPING>
